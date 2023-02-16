@@ -11,8 +11,9 @@ ul {
   margin: 0 0 0 0 !important;
 }
 li {
-  font-size: large;
+  font-family: "Kalam", cursive;
   padding: 5px 0;
+  color: darkblue;
 }
 .dustbin-btn {
   border: none;

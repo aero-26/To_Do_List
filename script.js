@@ -12,3 +12,10 @@ for (let i = 0; i < tick.length; i++) {
     }
   });
 }
+
+
+text[1].addEventListener("click", function(){
+   if(tick[1].checked = false){
+    tick[1].setAttribute("checked");
+   } 
+})
