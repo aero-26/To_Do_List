@@ -42,7 +42,7 @@ li {
 
 /* Adding background to container */
 .background {
-  background-image: url("notebook1.jpg");
+  background-image: url("notebook.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: soft-light;
