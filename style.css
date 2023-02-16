@@ -1,0 +1,62 @@
+/* Padding for awesome font */
+.i-head {
+  padding: 0.32rem 0 0 0;
+}
+/* Designing list item & dustbin button*/
+ul {
+  list-style-type: none;
+  float: left;
+  padding: 0 0 0 0 !important;
+  margin: 0 0 0 0 !important;
+}
+li {
+  font-size: large;
+  padding: 5px 0;
+}
+.dustbin-btn {
+  border: none;
+  background-color: transparent;
+  padding-top: 0.375rem;
+  padding-bottom: 0rem;
+}
+
+/* Fix for heading */
+.heading {
+  padding: 0.75rem 0 0 0;
+}
+
+/* Background for tasks */
+.daily {
+  background-color: #ff9a9a;
+}
+
+/* Background for goals */
+.goal {
+  background-color: #75b78f;
+}
+
+/* Fixing the space of entry */
+.entry-fix {
+  padding: 0 0.75rem;
+}
+
+/* Adding background to container */
+.background {
+  background-image: url("notebook1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: soft-light;
+  background-attachment: fixed;
+}
+
+/* Fixing input bar and button */
+.custom-input {
+  display: inline !important;
+  width: 95% !important;
+  padding-top: 0.125rem;
+  margin: 0 0 0.75rem 0.0625rem;
+}
+
+.btn {
+  margin-left: 0.5625rem;
+}
