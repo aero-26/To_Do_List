@@ -137,11 +137,10 @@
 }
 
 @media screen and (max-width: 432px) {
-    .custom-input {
-        width: 85% !important;
-    }
+  .custom-input {
+    width: 85% !important;
+  }
 }
-
 
 @media screen and (max-width: 405px) {
   .custom-input {
