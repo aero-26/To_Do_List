@@ -1,0 +1,68 @@
+/* Making Form Responsive */
+
+/*Laptop L*/
+
+@media screen and (max-width: 1320px) {
+  .custom-input {
+    width: 90% !important;
+  }
+}
+
+@media screen and (max-width: 1193px) {
+  .custom-input {
+    width: 89% !important;
+  }
+}
+
+@media screen and (max-width: 1089px) {
+  .custom-input {
+    width: 88% !important;
+  }
+}
+
+/* Laptop */
+
+@media screen and (max-width: 1002px) {
+  .custom-input {
+    width: 87% !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .custom-input {
+    width: 94% !important;
+  }
+  .goals {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 978px) {
+  .custom-input {
+    width: 93% !important;
+  }
+}
+
+@media screen and (max-width: 842px) {
+  .custom-input {
+    width: 92% !important;
+  }
+}
+
+/* Making buttons responsive */
+
+/* Laptop L */
+
+@media screen and (max-width: 1232px) {
+  .res-div {
+    padding: 0.3125rem 0 0 0 !important;
+  }
+}
+
+/* Laptop */
+
+@media screen and (max-width: 991px) {
+  .res-div {
+    padding: 0.3125rem 0 0 3.125rem !important;
+  }
+}

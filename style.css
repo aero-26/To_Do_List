@@ -14,12 +14,19 @@ li {
   font-family: "Kalam", cursive;
   padding: 5px 0;
   color: darkblue;
+  font-size: medium;
 }
 .dustbin-btn {
+  /* background-color: blue; */
   border: none;
   background-color: transparent;
-  padding-top: 0.375rem;
-  padding-bottom: 0rem;
+  padding: 0 0.625rem;
+}
+.edit-btn {
+  border: none;
+  /* background-color: blue; */
+  padding: 0 0.625rem;
+  background-color: transparent;
 }
 
 /* Fix for heading */

@@ -1,0 +1,79 @@
+/* Making input form responsive */
+
+/* 4k */
+
+@media screen and (max-width: 2560px) {
+  .custom-input {
+    width: 95% !important;
+  }
+}
+
+@media screen and (max-width: 2338px) {
+  .custom-input {
+    width: 94.4% !important;
+  }
+}
+
+@media screen and (max-width: 2093px) {
+  .custom-input {
+    width: 94% !important;
+  }
+}
+
+@media screen and (max-width: 2057px) {
+  .custom-input {
+    width: 93.9% !important;
+  }
+}
+
+@media screen and (max-width: 1925px) {
+  .custom-input {
+    width: 93.3% !important;
+  }
+}
+
+@media screen and (max-width: 1757px) {
+  .custom-input {
+    width: 92.5% !important;
+  }
+}
+
+@media screen and (max-width: 1575px) {
+  .custom-input {
+    width: 92% !important;
+  }
+}
+
+@media screen and (max-width: 1479px) {
+  .custom-input {
+    width: 91% !important;
+  }
+}
+
+/* Making buttons responsive */
+
+/* 4k */
+
+@media screen and (max-width: 2560px) {
+  .res-div {
+    padding: 0.3125rem 0 0 6.25rem !important;
+  }
+}
+
+@media screen and (max-width: 2132px) {
+  .res-div {
+    padding: 0.3125rem 0 0 4.875rem !important;
+  }
+}
+
+@media screen and (max-width: 1868px) {
+  .res-div {
+    padding: 0.3125rem 0 0 3.125rem !important;
+  }
+}
+
+@media screen and (max-width: 1532px) {
+  .res-div {
+    padding: 0.3125rem 0 0 1.5625rem !important;
+  }
+}

@@ -1,0 +1,97 @@
+/* Making the Form input responsive */
+
+/* Tablet */
+
+@media screen and (max-width: 739px) {
+  .custom-input {
+    width: 91% !important;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .custom-input {
+    width: 90% !important;
+  }
+}
+
+@media screen and (max-width: 597px) {
+  .custom-input {
+    width: 89% !important;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .custom-input {
+    width: 88% !important;
+  }
+}
+
+@media screen and (max-width: 501px) {
+  .custom-input {
+    width: 87% !important;
+  }
+}
+
+@media screen and (max-width: 464px) {
+  .custom-input {
+    width: 86% !important;
+  }
+}
+
+@media screen and (max-width: 433px) {
+  .custom-input {
+    width: 85% !important;
+  }
+}
+
+/* Making the buttons responsive */
+
+/* Tablet */
+
+@media screen and (max-width: 766px) {
+  .res-div {
+    padding: 0.3125rem 0 0 1.875rem !important;
+  }
+}
+
+@media screen and (max-width: 646px) {
+  .res-div {
+    padding: 0.3125rem 0 0 1.25rem !important;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .res-div {
+    padding: 0.3125rem 0 0 0.75rem !important;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .res-div {
+    padding: 0.3125rem 0 0 2.5rem !important;
+  }
+  .edit-btn {
+    padding: 0 0.625rem 0 0.3125rem;
+  }
+  .dustbin-btn {
+    padding: 0 0 0 0.3125rem;
+  }
+}
+
+@media screen and (max-width: 543px) {
+  .res-div {
+    padding: 0.3125rem 0 0 2.5rem !important;
+  }
+}
+
+@media screen and (max-width: 538px) {
+  .res-div {
+    padding: 0.3125rem 0 0 1.875rem !important;
+  }
+}
+
+@media screen and (max-width: 438px) {
+  .res-div {
+    padding: 0.3125rem 0 0 0.75rem !important;
+  }
+}
