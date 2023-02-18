@@ -48,26 +48,3 @@
   }
 }
 
-/* Making the buttons responsive */
-
-/* Mobile L */
-
-@media screen and (max-width: 366px) {
-  .res-div {
-    padding: 0.3125rem 0 0 0 !important;
-  }
-}
-
-/* Mobile S */
-
-@media screen and (max-width: 323px) {
-  .res-form {
-    padding: 0 0.375rem 0 0.375rem !important;
-  }
-}
-
-@media screen and (max-width: 307px) {
-  .res-form {
-    padding: 0 0.1875rem 0 0.5rem !important;
-  }
-}

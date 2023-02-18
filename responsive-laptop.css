@@ -48,21 +48,3 @@
     width: 92% !important;
   }
 }
-
-/* Making buttons responsive */
-
-/* Laptop L */
-
-@media screen and (max-width: 1232px) {
-  .res-div {
-    padding: 0.3125rem 0 0 0 !important;
-  }
-}
-
-/* Laptop */
-
-@media screen and (max-width: 991px) {
-  .res-div {
-    padding: 0.3125rem 0 0 3.125rem !important;
-  }
-}
