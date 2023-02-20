@@ -36,11 +36,13 @@ li {
 /* Background for tasks */
 .daily {
   background-color: #ff9a9a;
+  padding-bottom: 0.3125rem;
 }
 
 /* Background for goals */
 .goal {
   background-color: #75b78f;
+  padding-bottom: 0.3125rem;
 }
 
 /* Fixing the space of entry */
@@ -76,6 +78,6 @@ li {
 }
 
 /* To add padding to the rows */
-.custom-row{
-  padding: 0.1875rem 0; 
+.custom-row {
+  padding: 0.1875rem 0;
 }

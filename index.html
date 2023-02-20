@@ -48,12 +48,13 @@
           <!--Space for entering ToDos-->
           <div class="row">
             <div class="form-group">
-              <form action="" method="post">
+              <form action="" method="post" id="toDoInput">
                 <input
                   class="form-control form-control-sm custom-input"
                   type="text"
                   name="Enter ToDo."
                   placeholder="Enter your ToDos here."
+                  id="toDoList"
                 />
                 <button class="btn btn-danger btn-sm" type="submit">Add</button>
               </form>
@@ -62,52 +63,32 @@
 
           <!--Space where ToDos are listed-->
           <div class="row entry-fix">
-            <div class="col-12 daily rounded-3">
+            <div class="col-12 daily rounded-3" id="addtodo">
               <div class="row custom-row">
-
-                <div class="col-1">
+                <!-- <div class="col-1">
                   <input class="form-check-input" type="checkbox" />
                 </div>
 
                 <div class="col-9">
                   <ul>
                     <li>
-                      <i class="editable">Hello Friends chai peelo.</i>
-                    </li> 
+                      <i class="editable"
+                        >Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Distinctio facilis mollitia repudiandae omnis
+                        ipsum magnam eum exercitationem inventore optio modi?</i
+                      >
+                    </li>
                   </ul>
                 </div>
 
                 <div class="col-2">
                   <button class="edit-btn">
-                    <i class="fa-solid fa-arrow-up"></i>
+                    <i class="fa-solid fa-star"></i>
                   </button>
                   <button class="dustbin-btn">
                     <i class="text-danger fa-solid fa-trash-can"></i>
-                  </button> 
-                </div>
-
-                <div class="col-1">
-                  <input class="form-check-input" type="checkbox" />
-                </div>
-
-                <div class="col-9">
-                  <ul>
-                    <li>
-                      <i class="editable">Hello Friends chai peelo.</i>
-                    </li> 
-                  </ul>
-                </div>
-
-                <div class="col-2">
-                  <button class="edit-btn">
-                    <i class="fa-solid fa-arrow-up"></i>
                   </button>
-                  <button class="dustbin-btn">
-                    <i class="text-danger fa-solid fa-trash-can"></i>
-                  </button> 
-                </div>
-
-
+                </div> -->
               </div>
             </div>
           </div>
@@ -122,7 +103,7 @@
           <!--Space for Entering Goals-->
           <div class="row">
             <div class="form-group">
-              <form action="" method="post">
+              <form action="" method="post" id="goalInput">
                 <input
                   class="form-control form-control-sm custom-input"
                   type="text"
@@ -138,10 +119,9 @@
 
           <!--Space for Displaying Goals-->
           <div class="row entry-fix">
-            <div class="col-12 goal rounded-3">
+            <div class="col-12 goal rounded-3" id="addGoals">
               <div class="row custom-row">
-
-                <div class="col-1">
+                <!-- <div class="col-1">
                   <input class="form-check-input" type="checkbox" />
                 </div>
 
@@ -149,7 +129,7 @@
                   <ul>
                     <li>
                       <i class="editable">Hello Friends chai peelo.</i>
-                    </li> 
+                    </li>
                   </ul>
                 </div>
 
@@ -159,9 +139,8 @@
                   </button>
                   <button class="dustbin-btn">
                     <i class="text-danger fa-solid fa-trash-can"></i>
-                  </button> 
-                </div>
-
+                  </button>
+                </div> -->
               </div>
             </div>
           </div>
@@ -170,7 +149,8 @@
     </div>
 
     <!--Custom JavaScript-->
-    <script src="script.js"></script>
+    <script src="to_do.js"></script>
+    <script src="goals.js"></script>
 
     <!--Bootstrap CDN-->
     <script
