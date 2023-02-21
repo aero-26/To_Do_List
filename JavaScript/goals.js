@@ -53,10 +53,6 @@ goalInput.addEventListener("submit", (event) => {
     goalStarButton.addEventListener("click", () => {
       goalStarButton.classList.toggle("text-primary");
     });
-  } else {
-    goalList.value = "";
-    alert(`No more entries can be registered.`);
-  }
 
   // For applying strike-through by taping goals name.
 
@@ -101,4 +97,4 @@ goalInput.addEventListener("submit", (event) => {
   dynamicGoal++;
   goalId++;
   clearGoal++;
-});
+}})

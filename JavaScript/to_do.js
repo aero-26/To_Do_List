@@ -53,11 +53,7 @@ toDoInput.addEventListener("submit", (event) => {
     starButton.addEventListener("click", () => {
       starButton.classList.toggle("text-primary");
     });
-  } else {
-    toDoList.value = "";
-    alert(`No more entries can be registered.`);
-  }
-
+ 
   /* For applying strike-through by taping on task name */
 
   // Selecting the Checkbox
@@ -101,4 +97,4 @@ toDoInput.addEventListener("submit", (event) => {
   checkId++;
   dynamicToDo++;
   clearToDo++;
-});
+}});
