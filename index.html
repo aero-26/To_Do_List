@@ -7,11 +7,11 @@
     <title>To Do List</title>
 
     <!--Stylesheets-->
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="responsive-4k.css" />
-    <link rel="stylesheet" href="responsive-laptop.css" />
-    <link rel="stylesheet" href="responsive-tablet.css" />
-    <link rel="stylesheet" href="responsive-mobile.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/responsive-4k.css" />
+    <link rel="stylesheet" href="CSS/responsive-laptop.css" />
+    <link rel="stylesheet" href="CSS/responsive-tablet.css" />
+    <link rel="stylesheet" href="CSS/responsive-mobile.css" />
 
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -65,7 +65,10 @@
           <div class="row entry-fix">
             <div class="col-12 daily rounded-3" id="addtodo">
               <div class="row custom-row">
-                <!-- <div class="col-1">
+
+
+
+                <div class="col-1">
                   <input class="form-check-input" type="checkbox" />
                 </div>
 
@@ -81,14 +84,17 @@
                   </ul>
                 </div>
 
-                <div class="col-2">
+                <div class="col-2 btn-row">
                   <button class="edit-btn">
                     <i class="fa-solid fa-star"></i>
                   </button>
                   <button class="dustbin-btn">
                     <i class="text-danger fa-solid fa-trash-can"></i>
                   </button>
-                </div> -->
+                </div>
+
+
+
               </div>
             </div>
           </div>
@@ -109,6 +115,7 @@
                   type="text"
                   name="Enter ToDo."
                   placeholder="Enter your Goals here."
+                  id="goalList"
                 />
                 <button class="btn btn-success btn-sm" type="submit">
                   Add
@@ -121,26 +128,30 @@
           <div class="row entry-fix">
             <div class="col-12 goal rounded-3" id="addGoals">
               <div class="row custom-row">
-                <!-- <div class="col-1">
+
+
+                <div class="col-1">
                   <input class="form-check-input" type="checkbox" />
                 </div>
 
                 <div class="col-9">
                   <ul>
                     <li>
-                      <i class="editable">Hello Friends chai peelo.</i>
+                      <i class="editable">Lorem ipsum dolor sit amet consectetur adipisicing elit. At veniam fugit error? Harum nemo explicabo eius! Ad aut non, earum dolores sunt ipsum soluta sapiente accusamus cupiditate quisquam aliquam minus ducimus, excepturi voluptas nam.</i>
                     </li>
                   </ul>
                 </div>
 
-                <div class="col-2">
+                <div class="col-2 ">
                   <button class="edit-btn">
-                    <i class="fa-solid fa-arrow-up"></i>
+                    <i class="fa-solid fa-star"></i>
                   </button>
                   <button class="dustbin-btn">
                     <i class="text-danger fa-solid fa-trash-can"></i>
                   </button>
-                </div> -->
+                </div>
+
+
               </div>
             </div>
           </div>
@@ -149,8 +160,8 @@
     </div>
 
     <!--Custom JavaScript-->
-    <script src="to_do.js"></script>
-    <script src="goals.js"></script>
+    <script src="JavaScript/to_do.js"></script>
+    <script src="JavaScript/goals.js"></script>
 
     <!--Bootstrap CDN-->
     <script

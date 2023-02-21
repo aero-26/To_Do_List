@@ -12,17 +12,15 @@ let clearToDo = 1;
 let toDoInput = document.getElementById("toDoInput");
 
 toDoInput.addEventListener("submit", (event) => {
-  // This is very important line in order to stop the browser from autosubmitting form and crashing the website.
+  // This is very important line in order to stop the browser from auto-submitting form and crashing the website.
   event.preventDefault();
 
   // Adding If statement to avoid creating blank tasks
-
-  if (toDoList.value != "") {
-
+  if (toDoList.value != "" && dynamicToDo < 100) {
     /* Creating  New Dynamic Div template */
     let template = document.createElement("div");
     template.classList.add("row", "row-custom");
-    template.id = `todo-${dynamicToDo}`
+    template.id = `todo-${dynamicToDo}`;
 
     addtodo.appendChild(template);
 
@@ -55,21 +53,26 @@ toDoInput.addEventListener("submit", (event) => {
     starButton.addEventListener("click", () => {
       starButton.classList.toggle("text-primary");
     });
+  } else {
+    toDoList.value = "";
+    alert(`No more entries can be registered.`);
   }
 
   /* For applying strike-through by taping on task name */
 
-// Selecting the Checkbox  
-let autocheck = document.getElementById(`${checkId}-checkId`);
+  // Selecting the Checkbox
+  let autocheck = document.getElementById(`${checkId}-checkId`);
 
-// Adding Strike-through class plus also enabling the check options.
-let strikeThrough = document.getElementById(`${toDoId}-toDoId`);
-strikeThrough.addEventListener("click", () => {
-     strikeThrough.classList.toggle("done");
-     if(autocheck.checked){
-        autocheck.checked = false;  
-     }else{autocheck.checked = true;}
-})
+  // Adding Strike-through class plus also enabling the check options.
+  let strikeThrough = document.getElementById(`${toDoId}-toDoId`);
+  strikeThrough.addEventListener("click", () => {
+    strikeThrough.classList.toggle("done");
+    if (autocheck.checked) {
+      autocheck.checked = false;
+    } else {
+      autocheck.checked = true;
+    }
+  });
 
   /* For appling strike-through to the completed tasks by check option. */
   for (let i = 0; i < tick.length; i++) {
@@ -82,13 +85,13 @@ strikeThrough.addEventListener("click", () => {
     });
   }
 
-/* To add delete Task function */
+  /* To add delete Task function */
   let toDoDustbin = document.getElementById(`${clearToDo}`);
-  toDoDustbin.addEventListener("click", (event)=>{
+  toDoDustbin.addEventListener("click", (event) => {
     let removeToDoRow = toDoDustbin.id;
-    let deleteRow = document.getElementById(`todo-${removeToDoRow}`)
+    let deleteRow = document.getElementById(`todo-${removeToDoRow}`);
     deleteRow.remove();
-  }) 
+  });
 
   // This is to clear the form after submission.
   toDoList.value = "";
