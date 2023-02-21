@@ -35,7 +35,7 @@ goalInput.addEventListener("submit", (event) => {
                   </ul>
                 </div>
 
-                <div class="col-2">
+                <div class="col-2 btn-row">
                   <button class="edit-btn" title="Star this goal">
                     <i id="${starGoalId}-editGoal" class="fa-solid fa-star"></i>
                   </button>

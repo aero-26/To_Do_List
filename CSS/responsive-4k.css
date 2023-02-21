@@ -69,3 +69,15 @@
     padding-left: 3.75rem !important; 
   }
 }
+
+@media screen and (max-width: 1820px){
+  .btn-row{
+    padding-left: 2.5rem !important;
+  }
+}
+
+@media screen and (max-width: 1580px){
+  .btn-row{
+    padding-left: 1.25rem !important; 
+  }
+}
