@@ -50,17 +50,17 @@
 
 /* Making buttons responsive */
 
-@media screen and (max-width: 358px){
-  .edit-btn{
+@media screen and (max-width: 358px) {
+  .edit-btn {
     padding: 0 0.125rem;
   }
-  .delete-btn{
+  .delete-btn {
     padding: 0 0.125rem;
   }
 }
 
-@media screen and (max-width: 322px){
-  .edit-btn{
+@media screen and (max-width: 322px) {
+  .edit-btn {
     padding-left: 0rem;
   }
 }

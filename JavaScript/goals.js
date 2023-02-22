@@ -1,6 +1,6 @@
 /* Creating variables for futher use */
-let goalform = document.getElementById("goalList")
-let goalSubmitBtn = document.getElementById("goalSubmitBtn")
+let goalform = document.getElementById("goalList");
+let goalSubmitBtn = document.getElementById("goalSubmitBtn");
 let addGoals = document.getElementById("addGoals");
 let goaltext = document.getElementsByClassName("editable");
 let starGoalId = 1;
@@ -20,9 +20,8 @@ goalInput.addEventListener("submit", (event) => {
 
   // Adding If Statement to avoid creating blank tasks
   if (goalList.value != "" && dynamicGoal < 200) {
-   
-    localStorage.setItem(`${lsGoalKey}` , goalList.value);
-    
+    localStorage.setItem(`${lsGoalKey}`, goalList.value);
+
     // Creating new dynamic Goals List.
     let goalTemplate = document.createElement("div");
     goalTemplate.classList.add("row", "row-custom");
@@ -61,67 +60,67 @@ goalInput.addEventListener("submit", (event) => {
       goalStarButton.classList.toggle("text-primary");
     });
 
-  // For applying strike-through by taping goals name.
+    // For applying strike-through by taping goals name.
 
-  // Selecting the checkbox.
-  let autogoalcheckbox = document.getElementById(`${goalCheckId}-goalCheckId`);
+    // Selecting the checkbox.
+    let autogoalcheckbox = document.getElementById(
+      `${goalCheckId}-goalCheckId`
+    );
 
-  // Adding Strike-through class plus also enabling the check options.
-  let strikeThroughgoal = document.getElementById(`${goalId}-goalId`);
-  strikeThroughgoal.addEventListener("click", () => {
-    strikeThroughgoal.classList.toggle("done");
-    if (autogoalcheckbox.checked) {
-      autogoalcheckbox.checked = false;
-    } else {
-      autogoalcheckbox.checked = true;
-    }
-  });
-
-  /* For appling strike-through to the completed tasks by check option. */
-  for (let i = 0; i < tick.length; i++) {
-    tick[i].addEventListener("click", () => {
-      if (tick[i].checked) {
-        text[i].classList.add("done");
+    // Adding Strike-through class plus also enabling the check options.
+    let strikeThroughgoal = document.getElementById(`${goalId}-goalId`);
+    strikeThroughgoal.addEventListener("click", () => {
+      strikeThroughgoal.classList.toggle("done");
+      if (autogoalcheckbox.checked) {
+        autogoalcheckbox.checked = false;
       } else {
-        text[i].classList.remove("done");
+        autogoalcheckbox.checked = true;
       }
     });
+
+    /* For appling strike-through to the completed tasks by check option. */
+    for (let i = 0; i < tick.length; i++) {
+      tick[i].addEventListener("click", () => {
+        if (tick[i].checked) {
+          text[i].classList.add("done");
+        } else {
+          text[i].classList.remove("done");
+        }
+      });
+    }
+
+    /* To add delete Task function */
+    let goalDustbin = document.getElementById(`${clearGoal}`);
+    goalDustbin.addEventListener("click", (event) => {
+      let removeGoal = goalDustbin.id;
+      let deleteGoalRow = document.getElementById(`${removeGoal}-goal`);
+      deleteGoalRow.remove();
+
+      // Assigning remove button to remove Local Storage.
+      localStorage.removeItem(removeGoal);
+    });
+
+    // To clear the input after entering the Goal.
+    goalList.value = "";
+
+    starGoalId++;
+    goalCheckId++;
+    dynamicGoal++;
+    goalId++;
+    clearGoal++;
+    lsGoalKey++;
   }
-
-  /* To add delete Task function */
-  let goalDustbin = document.getElementById(`${clearGoal}`);
-  goalDustbin.addEventListener("click", (event) => {
-    let removeGoal = goalDustbin.id;
-    let deleteGoalRow = document.getElementById(`${removeGoal}-goal`);
-    deleteGoalRow.remove();
-
-// Assigning remove button to remove Local Storage.
-  localStorage.removeItem(removeGoal)
-
-  });
-
-
-
-  // To clear the input after entering the Goal.
-  goalList.value = "";
-
-  starGoalId++;
-  goalCheckId++;
-  dynamicGoal++;
-  goalId++;
-  clearGoal++;
-  lsGoalKey++;
-}})
+});
 
 /* For adding data from Local Storage on refresh */
 
-for (y = 100; y < 200; y++){
-    if(localStorage.getItem(y) != null){
-      let lsGoalData = localStorage.getItem(y)
-      goalform.value = lsGoalData;
-      goalSubmitBtn.click();
-localStorage.removeItem(y);
-      localStorage.setItem(lsGoalKeyonStart,lsGoalData)
-      lsGoalKeyonStart++
-    }
- }
+for (y = 100; y < 200; y++) {
+  if (localStorage.getItem(y) != null) {
+    let lsGoalData = localStorage.getItem(y);
+    goalform.value = lsGoalData;
+    goalSubmitBtn.click();
+    localStorage.removeItem(y);
+    localStorage.setItem(lsGoalKeyonStart, lsGoalData);
+    lsGoalKeyonStart++;
+  }
+}
