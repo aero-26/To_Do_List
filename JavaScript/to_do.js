@@ -1,4 +1,6 @@
 /* Creating variables for further purpose */
+let form = document.getElementById("toDoList")
+let toDoSubmitBtn = document.getElementById("toDo-Submit-btn")
 let addtodo = document.querySelector("#addtodo");
 let tick = document.getElementsByClassName("form-check-input");
 let text = document.getElementsByClassName("editable");
@@ -7,6 +9,9 @@ let checkId = 1;
 let toDoId = 0;
 let dynamicToDo = 1;
 let clearToDo = 1;
+let lsKey = 1;
+let lsKeyonStart = 1;
+
 
 /* For adding todo tasks to the list */
 let toDoInput = document.getElementById("toDoInput");
@@ -17,12 +22,14 @@ toDoInput.addEventListener("submit", (event) => {
 
   // Adding If statement to avoid creating blank tasks
   if (toDoList.value != "" && dynamicToDo < 100) {
+
+  localStorage.setItem(`${lsKey}`, toDoList.value);
+
     /* Creating  New Dynamic Div template */
     let template = document.createElement("div");
     template.classList.add("row", "row-custom");
     template.id = `todo-${dynamicToDo}`;
 
-    addtodo.appendChild(template);
 
     template.innerHTML = `<div class="col-1">
                   <input class="form-check-input" id="${checkId}-checkId" type="checkbox" title="Mark this task as done" />
@@ -45,6 +52,8 @@ toDoInput.addEventListener("submit", (event) => {
                   </button> 
                 </div>
                     `;
+
+    addtodo.appendChild(template);
 
     // Grabbing Dynamically created ID.
     let starButton = document.getElementById(`${starId}-editToDo`);
@@ -87,6 +96,9 @@ toDoInput.addEventListener("submit", (event) => {
     let removeToDoRow = toDoDustbin.id;
     let deleteRow = document.getElementById(`todo-${removeToDoRow}`);
     deleteRow.remove();
+
+  // Assigning remove button to delete localstorage  
+    localStorage.removeItem(removeToDoRow);
   });
 
   // This is to clear the form after submission.
@@ -97,4 +109,19 @@ toDoInput.addEventListener("submit", (event) => {
   checkId++;
   dynamicToDo++;
   clearToDo++;
+  lsKey++
 }});
+
+/* For adding data from Local Storage on refresh */
+
+for (q = 0; q < 100; q++){
+    if(localStorage.getItem(q) != null){
+      let lsData = localStorage.getItem(q)
+      form.value = lsData;
+      toDoSubmitBtn.click();
+localStorage.removeItem(q);
+      localStorage.setItem(lsKeyonStart,lsData)
+      lsKeyonStart++
+    }
+ }
+ 

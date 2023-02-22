@@ -1,4 +1,6 @@
 /* Creating variables for futher use */
+let goalform = document.getElementById("goalList")
+let goalSubmitBtn = document.getElementById("goalSubmitBtn")
 let addGoals = document.getElementById("addGoals");
 let goaltext = document.getElementsByClassName("editable");
 let starGoalId = 1;
@@ -6,6 +8,8 @@ let goalCheckId = 1;
 let goalId = 0;
 let dynamicGoal = 100;
 let clearGoal = 100;
+let lsGoalKey = 100;
+let lsGoalKeyonStart = 100;
 
 // For adding goals to Goals List.
 let goalInput = document.getElementById("goalInput");
@@ -16,6 +20,9 @@ goalInput.addEventListener("submit", (event) => {
 
   // Adding If Statement to avoid creating blank tasks
   if (goalList.value != "" && dynamicGoal < 200) {
+   
+    localStorage.setItem(`${lsGoalKey}` , goalList.value);
+    
     // Creating new dynamic Goals List.
     let goalTemplate = document.createElement("div");
     goalTemplate.classList.add("row", "row-custom");
@@ -85,9 +92,15 @@ goalInput.addEventListener("submit", (event) => {
   let goalDustbin = document.getElementById(`${clearGoal}`);
   goalDustbin.addEventListener("click", (event) => {
     let removeGoal = goalDustbin.id;
-    let deleteGoRow = document.getElementById(`${removeGoal}-goal`);
-    deleteGoRow.remove();
+    let deleteGoalRow = document.getElementById(`${removeGoal}-goal`);
+    deleteGoalRow.remove();
+
+// Assigning remove button to remove Local Storage.
+  localStorage.removeItem(removeGoal)
+
   });
+
+
 
   // To clear the input after entering the Goal.
   goalList.value = "";
@@ -97,4 +110,18 @@ goalInput.addEventListener("submit", (event) => {
   dynamicGoal++;
   goalId++;
   clearGoal++;
+  lsGoalKey++;
 }})
+
+/* For adding data from Local Storage on refresh */
+
+for (y = 100; y < 200; y++){
+    if(localStorage.getItem(y) != null){
+      let lsGoalData = localStorage.getItem(y)
+      goalform.value = lsGoalData;
+      goalSubmitBtn.click();
+localStorage.removeItem(y);
+      localStorage.setItem(lsGoalKeyonStart,lsGoalData)
+      lsGoalKeyonStart++
+    }
+ }
